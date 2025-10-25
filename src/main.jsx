@@ -36,9 +36,17 @@ function AppRoot() {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
-  // Gabungkan semua resep
-  const allMakanan = Object.values(ResepMakanan.resep);
-  const allMinuman = Object.values(ResepMinuman.resep);
+  // Gabungkan semua resep dan tambahkan category
+  const allMakanan = Object.values(ResepMakanan.resep).map(recipe => ({
+    ...recipe,
+    category: 'makanan'
+  }));
+
+  const allMinuman = Object.values(ResepMinuman.resep).map(recipe => ({
+    ...recipe,
+    category: 'minuman'
+  }));
+
   const allRecipes = [...allMakanan, ...allMinuman];
 
   const toggleFavorite = (recipeId) => {
