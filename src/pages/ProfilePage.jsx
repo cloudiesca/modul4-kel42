@@ -43,14 +43,18 @@ const ProfilePage = () => {
       <div style={styles.grid}>
         {members.map((member) => (
           <div key={member.id} style={styles.card}>
-            <img
-              src={member.photo}
-              alt={member.name}
-              style={styles.photo}
-            />
-            <h2 style={styles.name}>{member.name}</h2>
-            <p style={styles.nim}>NIM: {member.nim}</p>
-            <p style={styles.description}>{member.description}</p>
+            <div style={styles.photoContainer}>
+              <img
+                src={member.photo}
+                alt={member.name}
+                style={styles.photo}
+              />
+            </div>
+            <div style={styles.textContent}>
+              <h2 style={styles.name}>{member.name}</h2>
+              <p style={styles.nim}>NIM: {member.nim}</p>
+              <p style={styles.description}>{member.description}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -75,27 +79,38 @@ const styles = {
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '30px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+    gap: '40px',
     maxWidth: '1200px',
     margin: '0 auto',
   },
   card: {
     background: 'white',
     borderRadius: '16px',
-    padding: '32px',
-    textAlign: 'center',
+    padding: '40px',
     boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
     transition: 'all 0.3s ease',
     cursor: 'pointer',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  photoContainer: {
+    marginBottom: '24px',
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
   },
   photo: {
-    width: '160px',
-    height: '160px',
+    width: '180px',
+    height: '180px',
     borderRadius: '50%',
     objectFit: 'cover',
     border: '4px solid #f0f0f0',
-    marginBottom: '24px',
+  },
+  textContent: {
+    textAlign: 'center',
+    width: '100%',
   },
   name: {
     fontSize: '1.4em',
