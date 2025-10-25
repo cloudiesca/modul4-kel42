@@ -1,41 +1,39 @@
 import React from 'react';
-import profile1 from '../assets/profile1.png';
-import profile2 from '../assets/profile2.png';
-import profile3 from '../assets/profile3.png';
-import profile4 from '../assets/profile4.png';
+import profile1 from '../assets/profile1.jpg';
+import profile2 from '../assets/profile2.jpg';
+import profile3 from '../assets/profile3.jpg';
+import profile4 from '../assets/profile4.jpg';
 
 const ProfilePage = () => {
   const members = [
     {
       id: 1,
-      name: "Nama Anggota 1",
-      nim: "123456789",
-      role: "Ketua Kelompok",
-      description: "Mahasiswa Teknik Informatika yang tertarik pada Web Development dan UI/UX Design.",
+      name: "Desca Rahma Kholisa",
+      nim: "21120123130071",
+      description: "Mahasiswa Teknik Komputer 2023 - Universitas Diponegoro",
       photo: profile1
     },
     {
       id: 2,
-      name: "Nama Anggota 2",
-      nim: "987654321",
-      role: "Anggota",
-      description: "Passionate tentang Data Science dan Machine Learning. Suka coding dan problem solving.",
+      name: "Aurellio Ma'rifat Armando Lubis",
+      nim: "21120123140106",
+      description: "Mahasiswa Teknik Komputer 2023 - Universitas Diponegoro",
       photo: profile2
     },
     {
       id: 3,
-      name: "Nama Anggota 3",
-      nim: "456789123",
+      name: "Resvanda Bagas Saputra",
+      nim: "21120123130103",
       role: "Anggota",
-      description: "Tertarik pada Cybersecurity dan Network Administration. Hobi eksplorasi teknologi baru.",
+      description: "Mahasiswa Teknik Komputer 2023 - Universitas Diponegoro",
       photo: profile3
     },
     {
       id: 4,
-      name: "Nama Anggota 4",
-      nim: "321654987",
+      name: "Farrell Farros Fausto",
+      nim: "21120123120002",
       role: "Anggota",
-      description: "Fokus pada Mobile Development dan Game Development. Suka berkreasi dan berinovasi.",
+      description: "Mahasiswa Teknik Komputer 2023 - Universitas Diponegoro",
       photo: profile4
     }
   ];
