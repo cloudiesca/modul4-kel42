@@ -50,7 +50,6 @@ const ProfilePage = () => {
             />
             <h2 style={styles.name}>{member.name}</h2>
             <p style={styles.nim}>NIM: {member.nim}</p>
-            <p style={styles.role}>{member.role}</p>
             <p style={styles.description}>{member.description}</p>
           </div>
         ))}
@@ -62,62 +61,60 @@ const ProfilePage = () => {
 const styles = {
   container: {
     minHeight: '100vh',
-    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    padding: '40px 20px',
+    background: '#f5f7fa',
+    padding: '60px 20px',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
   },
   title: {
     textAlign: 'center',
-    color: 'white',
+    color: '#1a1a1a',
     fontSize: '2.5em',
-    marginBottom: '50px',
-    textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
+    marginBottom: '60px',
+    fontWeight: '700',
+    letterSpacing: '-0.5px',
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
     gap: '30px',
     maxWidth: '1200px',
     margin: '0 auto',
   },
   card: {
     background: 'white',
-    borderRadius: '20px',
-    padding: '30px',
+    borderRadius: '16px',
+    padding: '32px',
     textAlign: 'center',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+    transition: 'all 0.3s ease',
+    cursor: 'pointer',
   },
   photo: {
-    width: '150px',
-    height: '150px',
+    width: '160px',
+    height: '160px',
     borderRadius: '50%',
     objectFit: 'cover',
-    border: '5px solid #667eea',
-    marginBottom: '20px',
-    boxShadow: '0 5px 15px rgba(0,0,0,0.2)',
+    border: '4px solid #f0f0f0',
+    marginBottom: '24px',
   },
   name: {
-    fontSize: '1.5em',
-    color: '#333',
-    marginBottom: '10px',
-    fontWeight: 'bold',
+    fontSize: '1.4em',
+    color: '#1a1a1a',
+    marginBottom: '8px',
+    fontWeight: '600',
+    letterSpacing: '-0.3px',
   },
   nim: {
-    color: '#667eea',
-    fontSize: '1.1em',
-    marginBottom: '15px',
-    fontWeight: '600',
-  },
-  role: {
-    color: '#666',
-    fontSize: '0.95em',
-    marginBottom: '15px',
-    fontStyle: 'italic',
+    color: '#0066ff',
+    fontSize: '1em',
+    marginBottom: '16px',
+    fontWeight: '500',
   },
   description: {
-    color: '#555',
-    fontSize: '0.9em',
+    color: '#666',
+    fontSize: '0.95em',
     lineHeight: '1.6',
+    fontWeight: '400',
   },
 };
 
