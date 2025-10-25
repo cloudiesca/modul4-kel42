@@ -11,13 +11,13 @@ function App() {
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img src={appLogo} className="logo" alt="resep-nusantara-modul4-kel30 logo" />
+          <img src={appLogo} className="logo" alt="resep-nusantara-modul4-kel42 logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>resep-nusantara-modul4-kel30</h1>
+      <h1>resep-nusantara-modul4-kel42</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}

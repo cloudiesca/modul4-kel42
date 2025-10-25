@@ -5,9 +5,10 @@ import { createRoot } from 'react-dom/client';
 // Pages
 import SplashScreen from './pages/SplashScreen';
 import HomePage from './pages/HomePage';
-import ResepPage from './pages/ResepPage'; // Halaman baru
+import MakananPage from './pages/MakananPage';
+import MinumanPage from './pages/MinumanPage';
 import FavoritePage from './pages/FavoritePage';
-import DetailPage from './pages/DetailPage'; // Halaman baru
+import DetailPage from './pages/DetailPage';
 import ProfilePage from './pages/ProfilePage';
 
 // Components
@@ -23,7 +24,7 @@ import PWABadge from './PWABadge';
 function AppRoot() {
   const [showSplash, setShowSplash] = useState(true);
   const [currentPage, setCurrentPage] = useState('home');
-  const [selectedRecipeId, setSelectedRecipeId] = useState(null); // State untuk resep yang dipilih
+  const [selectedRecipeId, setSelectedRecipeId] = useState(null);
 
   // State untuk favorit
   const [favorites, setFavorites] = useState(() => {
@@ -50,7 +51,7 @@ function AppRoot() {
   const handleSplashComplete = () => setShowSplash(false);
   const handleNavigation = (page) => {
     setCurrentPage(page);
-    handleCloseDetail(); // Tutup detail page jika pindah halaman
+    handleCloseDetail();
   };
 
   const renderCurrentPage = () => {
@@ -58,8 +59,10 @@ function AppRoot() {
     switch (currentPage) {
       case 'home':
         return <HomePage {...pageProps} />;
-      case 'resep':
-        return <ResepPage allRecipes={allRecipes} {...pageProps} />;
+      case 'makanan':
+        return <MakananPage allRecipes={allRecipes} {...pageProps} />;
+      case 'minuman':
+        return <MinumanPage allRecipes={allRecipes} {...pageProps} />;
       case 'favorit':
         const favoriteRecipes = allRecipes.filter(r => favorites.includes(r.id));
         return <FavoritePage favoriteRecipes={favoriteRecipes} {...pageProps} />;
@@ -79,7 +82,7 @@ function AppRoot() {
   return (
     <div className="min-h-screen bg-gray-50">
       <DesktopNavbar currentPage={currentPage} onNavigate={handleNavigation} />
-      
+
       <main className="min-h-screen">
         {renderCurrentPage()}
       </main>
@@ -93,7 +96,7 @@ function AppRoot() {
           toggleFavorite={toggleFavorite}
         />
       )}
-      
+
       <MobileNavbar currentPage={currentPage} onNavigate={handleNavigation} />
       <PWABadge />
     </div>
