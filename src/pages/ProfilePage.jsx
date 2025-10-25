@@ -24,7 +24,6 @@ const ProfilePage = () => {
       id: 3,
       name: "Resvanda Bagas Saputra",
       nim: "21120123130103",
-      role: "Anggota",
       description: "Mahasiswa Teknik Komputer 2023 - Universitas Diponegoro",
       photo: profile3
     },
@@ -32,7 +31,6 @@ const ProfilePage = () => {
       id: 4,
       name: "Farrell Farros Fausto",
       nim: "21120123120002",
-      role: "Anggota",
       description: "Mahasiswa Teknik Komputer 2023 - Universitas Diponegoro",
       photo: profile4
     }
